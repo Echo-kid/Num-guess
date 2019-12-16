@@ -1,9 +1,9 @@
 
 
-var guess = parseInt(prompt("Guess a number between 1 and 10. You have 10 guesses..."));
-alert("You picked " + guess);
+
 // for loop to give 10 guesses.
 function guessNumber(num) {
+	var guess = parseInt(prompt("Guess a number between 1 and 10. You have 10 guesses..."));
 	var rando = Math.random();
 	var rando2 = (rando * 10) + 1;
 	var numField = Math.floor(rando2);
@@ -25,5 +25,4 @@ function guessNumber(num) {
     }
 }
 
-guessNumber(guess);
 
