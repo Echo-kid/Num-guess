@@ -11,16 +11,16 @@ function guessNumber(num) {
     for (var i = 9; i > 0; i--) {
     	if (x >= 1 && x <= 10) {
         	if (x === numField) {
-                return alert("Congrats! You chose correctly!");
-            	break;
+                  return alert("Congrats! You chose correctly!");
+                  break;
         	}
         	else if (x !== numField) {
-            	alert("You now have " + (i + 1) + " guesses left...");
-            	x = parseInt(prompt("Guess again..."));
+            	  alert("You now have " + (i + 1) + " guesses left...");
+            	  x = parseInt(prompt("Guess again..."));
         	}
         }
         else {
-         	x = parseInt(prompt("Please chose a number between 1 and 10"));    
+          x = parseInt(prompt("Please chose a number between 1 and 10"));    
         }
     }
 }
