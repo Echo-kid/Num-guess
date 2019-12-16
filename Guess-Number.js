@@ -1,21 +1,28 @@
-
-let randoNum = Math.floor((Math.random() * 100) + 1);
-let guess = prompt("Guess a number between 1 and 100. You have 10 guesses...");
+<script>
+var guess = parseInt(prompt("Guess a number between 1 and 10. You have 10 guesses..."));
+alert("You picked " + guess);
 // for loop to give 10 guesses.
-function guessNumber(randoNum) {
+function guessNumber(num) {
+	var rando = Math.random();
+	var rando2 = (rando * 10) + 1;
+	var numField = Math.floor(rando2);
+    var x = num;
     for (var i = 9; i > 0; i--) {
-        if (guess === randoNum) {
-            alert("Congrats! You chose correctly!")
-            break;
-        }
-        else if (guess !== randoNum) {
-            alert("You now have " + i + " guesses left...");
-            guess = prompt("Guess again...");
-        }
-        else {
-        	alert("You are out of guesses");
-        }
+    	if (x >= 1 && x <= 10) {
+        	if (x === numField) {
+            	return alert("Congrats! You chose correctly!");
+            	break;
+        	}
+        	else if (x !== numField) {
+            	alert("You now have " + (i + 1) + " guesses left...");
+            	x = parseInt(prompt("Guess again..."));
+        	}
+         }
+         else {
+         	x = parseInt(prompt("Please chose a number between 1 and 10"));    
+         }
     }
 }
-console.log(guessNumber(randoNum));
 
+guessNumber(guess);
+</script>
