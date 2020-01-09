@@ -20,9 +20,6 @@ function guessNumber(num) {
         	} else if (x !== numField) {
             	alert("You now have " + i + " guesses left...");
             	x = parseInt(prompt("Guess again..."));
-        	} else if (x === 0) {
-				alert("sorry. You are out of guesses...");
-				break;
 			}
         }
         else {
